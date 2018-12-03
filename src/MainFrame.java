@@ -13,11 +13,14 @@ public class MainFrame extends JFrame implements KeyListener {
         setTitle("Flappy Bird");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+
+        /*
         Toolkit tk = Toolkit.getDefaultToolkit();
         for(int i = 1; i < 8; i++) {
             Image icon = tk.getImage(i + "f.png");
             setIconImage(icon);
         }
+        */
 
         addKeyListener(this);
         setFocusable(true);

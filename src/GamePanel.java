@@ -121,14 +121,14 @@ public class GamePanel extends JPanel implements Runnable, ImageObserver {
         g2.draw(rect8);
 
 
-        g2.setPaint(Color.YELLOW);
+        g2.setPaint(Color.ORANGE);
         Ellipse2D birdBody = new Ellipse2D.Double(385,-pos,40,30);
 
-        //g2.fill(birdBody);
-        //g2.draw(birdBody);
+        g2.fill(birdBody);
+        g2.draw(birdBody);
 
 
-        if (wingsUp) {
+        /*if (wingsUp) {
             wings--;
         }
         if (!wingsUp) {
@@ -142,6 +142,8 @@ public class GamePanel extends JPanel implements Runnable, ImageObserver {
         }
 
         g2.drawImage(Toolkit.getDefaultToolkit().getImage( wings + "f.png"), 385, -pos, this);
+
+        */
 
         g2.setPaint(Color.BLACK);
         g2.drawString(score + "", 380,100);
