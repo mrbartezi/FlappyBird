@@ -13,8 +13,8 @@ public class GamePanel extends JPanel implements Runnable, ImageObserver {
     private Random random;
     private Image bird;
     private boolean gameOver = false, wingsUp = false;
-    private int pipeGap = 250, count = 0, speed = 4, acceleration = -20, pos = -275, fps = 60, colX1 = 1200,
-            colX2 = colX1 + pipeGap , colX3 = colX2 + pipeGap, colX4 = colX3 + pipeGap ,
+    private int pipesGap = 250, count = 0, speed = 4, acceleration = -20, pos = -275, fps = 60, colX1 = 1200,
+            colX2 = colX1 + pipesGap , colX3 = colX2 + pipesGap, colX4 = colX3 + pipesGap ,
             colY1, colY2, colY3, colY4, gapSize = 150, gameSpeed = 3, score = 0, wings = 1;
 
 
@@ -67,21 +67,21 @@ public class GamePanel extends JPanel implements Runnable, ImageObserver {
         }
 
         if(colX1< -60) {
-            colX1 = colX4 + pipeGap;
+            colX1 = colX4 + pipesGap;
             colY1 = random.nextInt(400 - gapSize);
         }
 
         if(colX2< -60) {
-            colX2 = colX1 + pipeGap;
+            colX2 = colX1 + pipesGap;
             colY2 = random.nextInt(400 - gapSize);
         }
 
         if(colX3< -60) {
-            colX3 = colX2 + pipeGap;
+            colX3 = colX2 + pipesGap;
             colY3 = random.nextInt(400 - gapSize);
         }
         if(colX4< -60) {
-            colX4 = colX3 + pipeGap;
+            colX4 = colX3 + pipesGap;
             colY4 = random.nextInt(400 - gapSize);
         }
 
